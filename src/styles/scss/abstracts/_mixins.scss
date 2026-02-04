@@ -1,0 +1,28 @@
+@use 'vars' as *;
+
+@mixin flexBox($ff: row nowrap, $jc: center, $ai: center) {
+  display: flex;
+  flex-flow: $ff;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin glass(
+  $bg-color: $glass,
+  $bts: solid,
+  $btw: 1px,
+  $btc: $border-light,
+  $brs: solid,
+  $brw: 1px,
+  $brc: $border-light,
+  $blur: 1em
+) {
+  background-color: $bg-color;
+  backdrop-filter: blur($blur);
+  border-top-style: $bts;
+  border-top-width: $btw;
+  border-top-color: $btc;
+  border-right-style: $brs;
+  border-right-width: $brw;
+  border-right-color: $brc;
+}

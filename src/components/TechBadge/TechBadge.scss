@@ -1,0 +1,21 @@
+@use '../../styles/scss/index';
+@use '../../styles/scss/abstracts/mixins' as m;
+@use '../../styles/scss/abstracts/vars' as v;
+
+.TechBadge {
+  @include m.flexBox($ff: column nowrap);
+  width: 100%;
+  height: 100%;
+  gap: .5em;
+  border: 1px solid v.$border-light;
+  border-radius: 1em;
+
+  &-pic {
+    width: 3em;
+    height: 3em;
+  }
+
+  &-icon {
+    filter: invert(95%) sepia(5%) saturate(37%) hue-rotate(314deg) brightness(91%) contrast(85%);
+  }
+}

@@ -1,0 +1,33 @@
+@use '../../styles/scss/index';
+@use '../../styles/scss/abstracts/mixins' as m;
+@use '../../styles/scss/abstracts/vars' as v;
+
+.SocialLink {
+  @include m.flexBox();
+  width: 100%;
+  height: 100%;
+  gap: .5em;
+  font-weight: 700;
+  border: 1px solid v.$border-light;
+  border-radius: 1em;
+  gap: 0.5em;
+  transition: background-color 1s;
+  
+  &:hover {
+    background-color: v.$dark-glass;
+    transition: background-color .3s;
+  }
+
+  &-pic {
+    width: 3em;
+    height: 3em;
+  }
+
+  &-icon {
+    filter: invert(95%) sepia(5%) saturate(37%) hue-rotate(314deg) brightness(91%) contrast(85%);
+  }
+
+  &-wrapper {
+    @include m.flexBox($ff: column nowrap, $ai: flex-start)
+  }
+}

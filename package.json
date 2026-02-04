@@ -1,0 +1,72 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Professional frontend portfolio built with a custom Webpack architecture, focusing on semantic HTML, web accessibility (a11y), and scalable CSS methodologies.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --ext .js,.jsx",
+    "start": "webpack serve --config config/webpack.dev.cjs",
+    "build": "webpack --config config/webpack.prod.cjs",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "frontend",
+    "software-architecture",
+    "react",
+    "webpack",
+    "accessibility",
+    "a11y",
+    "suit-css",
+    "scss"
+  ],
+  "author": "Rodrigo Andre Gutierrez <rodrigoandregutierrez@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "core-js": "^3.48.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "@babel/preset-react": "^7.28.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "mini-css-extract-plugin": "^2.10.0",
+    "prettier": "^3.8.1",
+    "react-refresh": "^0.18.0",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.6",
+    "standard": "^17.1.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-merge": "^6.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,html}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "node_modules/standard/eslintrc.json",
+      "prettier"
+    ]
+  }
+}

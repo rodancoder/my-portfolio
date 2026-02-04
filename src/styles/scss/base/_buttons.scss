@@ -1,0 +1,41 @@
+@use '../abstracts/vars' as *;
+@use '../abstracts/mixins' as *;
+
+@mixin btn(
+  $bg-clr: $btn-bg,
+  $clr: $btn-color,
+  $hover-bg: $btn-hover-bg,
+  $hover-clr: $btn-hover-color,
+  $active-color: $btn-active-color,
+  $active-bg: $btn-active-bg,
+  $p: 0.5rem 1rem,
+  $fsz: 1rem,
+  $br: 0.3rem
+) {
+  @include flexBox;
+  gap: 1em;
+  min-height: 3rem;
+  min-width: 6rem;
+  width: 100%;
+  padding: $p;
+  font-size: $fsz;
+  font-weight: 600;
+  color: $clr;
+  background-color: $bg-clr;
+  border-radius: $br;
+  text-transform: capitalize;
+  transition: all 0.3s;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.2s;
+    background-color: $hover-bg;
+    color: $hover-clr;
+  }
+
+  &:active {
+    background-color: $active-bg;
+    color: $active-color;
+  }
+}

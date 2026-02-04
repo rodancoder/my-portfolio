@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+*.css
+*.json
+*.md
+.coverage
+.husky
+*.config.cjs

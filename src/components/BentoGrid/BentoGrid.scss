@@ -1,0 +1,28 @@
+@use '../../styles/scss/index';
+@use '../../styles/scss/abstracts/mixins' as m;
+@use '../../styles/scss/abstracts/vars' as v;
+
+.BentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  position: relative;
+  grid-template-areas: 
+  "portrait hero    hero    hero"
+  "portrait about   about   stack"
+  "projects projects projects stack"
+  "contact  contact  contact contact";
+  width: 100%;
+  height: 100vh;
+  padding: 2em 4em;
+  gap: 1.5em;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: v.$dark;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: opacity(.90);
+  }
+}
